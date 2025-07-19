@@ -1,0 +1,9 @@
+#!name=Soundcloud Go+
+#!desc=Mở khóa đầy đủ tính năng của Soundcloud Go+ ^^
+# 🩷 Discord: https://discord.gg/rabbitstore
+# 🤍 Release by: Xunn | TheSword Studio
+#!author=Xunn[https:instagram.com/itzxunn_]
+[Script]
+SoundCloudGo+=type=http-response,pattern=https://api-mobile.soundcloud.com/configuration/ios,requires-body=1,script-path=https://raw.githubusercontent.com/ItzXunn/xunn/refs/heads/main/soundcloud.js
+[MITM]
+hostname= %APPEND% api-mobile.soundcloud.com
