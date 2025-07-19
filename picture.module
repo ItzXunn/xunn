@@ -1,0 +1,11 @@
+#!name=Wink + Picsart 🩵
+#!desc=Mở khóa đầy đủ tính năng của Wink VIP và Picsart VIP ^^
+# :pink_heart: Discord: https://discord.gg/rabbitstore
+# :white_heart: Release by: Xunn | TheSword Studio
+#!author=Xunn[https:instagram.com/itzxunn_]
+[Script]
+http-response ^https://api\.revenuecat\.com/.+/(receipts$|subscribers/[^/]+$) script-path=https://raw.githubusercontent.com/ItzXunn/xunn/refs/heads/main/crack.js, requires-body=true, timeout=5, tag=Crack
+http-request https://api.picsart.com/gw-v2/shop/subscription/apple/purchases script-path=github.com/ItzXunn/xunn/blob/main/picsart.js, requires-body=true, timeout=5, tag=PicsArt
+WinkVipCrack.js=type=http-response,pattern=^https?:\/\/api-sub\.meitu\.com\/v2\/user\/vip_info_by_group\.json,requires-body=1,script-path=https://github.com/ItzXunn/xunn/blob/main/winkvip.js
+[MITM]
+hostname = api.revenuecat.com, buy.itunes.apple.com, api.picsart.com, us-central1-alight-creative.cloudfunctions.net, api.adapty.io, carrotweather.herokuapp.com, lcs-mobile-cops.adobe.io, order.creativeappnow.com, api.mwm-users.com, us-central1-muslim-pro-app.cloudfunctions.net, api.gptkeyboard.app, prod.studysmarter.de, api.qonversion.io, api.blinkist.com, subscription.grammarly.com, api.esound.app, api.purchasely.io, api-sub.meitu.com, 
