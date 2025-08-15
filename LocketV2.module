@@ -1,0 +1,20 @@
+#!name=Locket 💛
+#!desc=Mở khóa đầy đủ tính năng của Locket Gold ^^
+# 🩷 Discord: https://discord.gg/rabbitstore
+# 🤍 Release by: Xunn | TheSword Studio
+#!author=Xunn[https:instagram.com/itzxunn_]
+
+[General]
+user-agent = Locket/1.0.0 (iPhone; iOS 18.5; Scale/3.00)
+
+[Script]
+# ~ Dev by: Xunn
+# ~ Enhanced for Shadowrocket, Surge, & LanceX
+revenuecat = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.*\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/ItzXunn/xunn/refs/heads/main/Locket_fix_V2.js, requires-body=true, max-size=-1, timeout=120
+
+deleteHeader = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.*\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/ItzXunn/xunn/refs/heads/main/deleteHeader.js, timeout=120
+
+[MITM]
+hostname = api.revenuecat.com, raw.githubusercontent.com
+
+# ~ Xunn
