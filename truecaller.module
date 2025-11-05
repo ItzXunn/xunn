@@ -1,0 +1,32 @@
+#!name=Truecaller 💛
+#!desc=Mở khóa đầy đủ tính năng của Truecalelr ^^
+# 🩷 Discord: https://discord.gg/rabbitstore
+# 🤍 Release by: Xunn | TheSword Studio
+#!author=Xunn[https:instagram.com/itzxunn_]
+
+[General]
+bypass-system = true
+skip-proxy = *.local, *.crashlytics.com
+tun-excluded-routes = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12
+
+[MITM]
+hostname = api.revenuecat.com, buy.itunes.apple.com, api-sub.meitu.com, api.picsart.com, premium*.truecaller.com, sub.store, us-central1-alight-creative.cloudfunctions.net, license.pdfexpert.com, medi.dxzzy321.top, -redirector*.googlevideo.com, *.googlevideo.com, www.youtube.com, s.youtube.com, youtubei.googleapis.com
+
+[Script]
+Truecaller=type=http-response,pattern=^https:\/\/premium-(.+)\.truecaller\.com\/v\d\/(subscriptions|products\/apple),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ItzXunn/xunn/refs/heads/main/truecaller.js,tag=Truecaller
+
+arguments=blockUpload:true,blockImmersive:true,captionLang:zh-Hans,lyricLang:zh-Hans,scriptExecutionEngine:auto,debug:false
+
+[Rule]
+AND,((DOMAIN-SUFFIX,googlevideo.com), (PROTOCOL,UDP)),REJECT
+AND,((DOMAIN,youtubei.googleapis.com), (PROTOCOL,UDP)),REJECT
+
+[Url Rewrite]
+^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad _ reject-200
+^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads _ reject-200
+^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) _ reject-200
+^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext _ reject-200
+(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 302
+
+[Map Local]
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data-type=text data="" status-code=200
