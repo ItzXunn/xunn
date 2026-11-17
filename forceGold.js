@@ -52,7 +52,7 @@ if (ua.includes("Locket")) {
             feature_set: [
                 {
                     title: "Instagram: @itzxunn_ ✨",
-                    body: "Nhớ Follow Kênh Ủng Hộ Mình Nhé 💛",
+                    body: "Nhớ Follow Instagram Ủng Hộ Mình Nhé 💛",
                     imageURL: "https://i.postimg.cc/x18zXjC8/image-2026-05-29-011326678-removebg-preview.png"
                 }
             ],
